@@ -41,6 +41,20 @@ module AngellistApi
       def post_messages(options={})
         post("1/messages", options)
       end
+
+      # Marks all messages for the current user in the given thread_ids as viewed.
+      # Returns an array of all affected thread_ids on success. Requires scope "message".
+      #
+      # @requires_authentication Yes
+      #
+      # @param ids [Array] IDs of the startups to fetch.
+      #
+      # @example Mark threads 1, 2, and 3 as read for the current user.
+      #   AngellistApi.post_mark_messages([1, 2, 3])
+      def post_mark_messages(thread_ids)
+        params = { :ids => thread_ids.join(',') }
+        post("1/messages/mark", params)
+      end
     end
   end
 end
