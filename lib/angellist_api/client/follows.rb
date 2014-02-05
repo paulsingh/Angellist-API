@@ -34,6 +34,24 @@ module AngellistApi
         delete("1/follows", options)
       end
 
+      # Returns whether the source and target profiles follow each other. The source
+      # key will contain the follow from the source to the target, if it exists.
+      # The target key will contain the follow from the target to the source, if it
+      # exists. Otherwise null is returned.
+      #
+      # @requires_authentication Optional
+      #
+      # @param [Hash] options A customizable set of options.
+      # @option options [Integer] :source_id The id of the source User. Cannot be a Startup id since Startups cannot follow things.
+      # @option options [String] :target_type Must be either User or Startup.
+      # @option options [Integer] :target_id The id of the target, either a User id or Startup id.
+      #
+      # @example  Check if two users follow each other.
+      #   AngellistApi.get_relationship(:source_id => 671, :target_type => 'User', :target_id => 2)
+      def get_relationship(options={})
+        get('1/follows/relationship', options)
+      end
+
       # Returns the follower and followed information based on comma-separated
       # follow ids, such as those from the activity feed.
       #

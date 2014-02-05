@@ -1719,4 +1719,64 @@ http_interactions:
         Soon"}}]'
     http_version: !!null 
   recorded_at: Sun, 22 Apr 2012 04:17:09 GMT
+- request:
+    method: get
+    uri: https://api.angel.co/1/follows/relationship?source_id=671&target_type=User&target_id=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - AngellistApi Ruby Gem 1.0.6
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwNyBNYXkgMjAxMyAyMjozODozMiBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjY0YWVlOGJjODk4MTFiODVlNzE1MzJjMDE1YzM4OTQxIg==
+      !binary "c2VydmVy":
+      - !binary |-
+        bmdpbng=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        MTAwMA==
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        OTk0
+      !binary "eC1ydW50aW1l":
+      - !binary |-
+        MTE=
+      !binary "Y29udGVudC1sZW5ndGg=":
+      - !binary |-
+        MTA1
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Q2xvc2U=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJzb3VyY2UiOnsiaWQiOjg2NTAwLCJjcmVhdGVkX2F0IjoiMjAxMS0wNC0y
+        MVQwNToyNzozNFoifSwidGFyZ2V0Ijp7ImlkIjo4NzQyMywiY3JlYXRlZF9h
+        dCI6IjIwMTEtMDQtMjNUMDA6MDA6NTFaIn19
+    http_version:
+  recorded_at: Tue, 07 May 2013 22:38:33 GMT
 recorded_with: VCR 2.1.0

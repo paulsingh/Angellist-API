@@ -19,6 +19,14 @@ describe AngellistApi::Client::Follows do
     end
   end
 
+  describe '#get_relationship' do
+    it 'gets 1/get_relationship' do
+      options = { :some => 'options'}
+      client.should_receive(:get).with('1/follows/relationship', options).and_return('success')
+      client.get_relationship(options).should == 'success'
+    end
+  end
+
   describe '#get_follows' do
     it 'gets 1/follows/batch' do
       ids = [1, 2, 3]

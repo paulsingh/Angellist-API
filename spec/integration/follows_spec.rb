@@ -33,6 +33,12 @@ describe AngellistApi::Client::Follows,
     following.startups.first.should have_key :product_desc
   end
 
+  it 'gets the relationship between two users' do
+    relationship = client.get_relationship(:source_id => 671, :target_type => 'User', :target_id => 2)
+    relationship.source.should be_an_instance_of Hashie::Mash
+    relationship.target.should be_an_instance_of Hashie::Mash
+  end
+
   it 'gets IDs of users a user is following' do
     followers = client.get_user_following_ids(2850)
     followers.ids.should be_an_instance_of Array
@@ -57,4 +63,3 @@ describe AngellistApi::Client::Follows,
     followers.ids.first.should be_an_instance_of Fixnum
   end
 end
-
