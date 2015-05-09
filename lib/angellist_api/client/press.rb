@@ -17,8 +17,20 @@ module AngellistApi
       #   retrieve.
       # @option options [Integer] :per_page (50) The number of results to return
       #   for a page. Maximum of 50.
-      def get_press(options={})
+      def get_press_startups(options={})
         get("1/press", options)
+      end
+      
+      # Returns the given press.
+      #
+      # @requires_authentication No
+      #
+      # @param [Integer] id ID of the desired press.
+      #
+      # @example Get a user's roles given an id.
+      #   AngellistApi.get_press(125462)
+      def get_press(id)
+        get("1/press/#{id}")
       end
     end
   end

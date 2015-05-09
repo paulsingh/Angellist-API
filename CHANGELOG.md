@@ -1,5 +1,8 @@
 ## Master
 
+- Add GET /press/:id endpoint with `get_press`. Update the name of the other
+  function to `get_press_startups` when you want to return press for a given
+  startup ([Stéphane Juban])
 - Add endpoint for users by tag, to get users for a particular location or
   market ([Stéphane Juban])
 
