@@ -11,8 +11,6 @@ http_interactions:
       - application/json
       User-Agent:
       - AngellistApi Ruby Gem 1.1.0
-      Authorization:
-      - Bearer a91e5d072c3faa5e90e751671cc39035
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -21,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Cache-Control:
-      - must-revalidate, private, max-age=0
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 26 Apr 2015 11:46:16 GMT
+      - Sat, 09 May 2015 13:46:23 GMT
       Etag:
       - '"623f7884677553a773cc2de4b19f0280"'
       Server:
@@ -37,17 +35,17 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Ratelimit-Limit:
-      - '2000'
+      - '1000'
       X-Ratelimit-Remaining:
-      - '1989'
+      - '993'
       X-Request-Id:
-      - ce96be4c01343ad58b5b5b2e6e11b82e
+      - 6ede6bd752dd7132317b9146286ec75f
       X-Runtime:
-      - '0.027277'
+      - '0.023419'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '5935'
       Connection:
       - keep-alive
     body:
@@ -172,5 +170,63 @@ http_interactions:
         their...","title":"AngelList Alums Have Raised $1.1 Billion","updated_at":"2012-08-08T21:52:43Z","url":"http://pandodaily.com/2012/08/08/who-needs-a-walk-down-sand-hill-road-angellist-alums-have-raised-1-1-billion/"},{"created_at":"2012-05-09T00:09:40Z","id":521,"owner_id":6702,"owner_type":"Startup","posted_at":"2012-05-08","snippet":"","title":"AngelList''s
         Week-Long Hackathon Gives A Glimpse Of What''s Next For The Company","updated_at":"2012-05-09T00:09:40Z","url":"http://pandodaily.com/2012/05/08/angellists-week-long-hackathon-gives-a-glimpse-of-whats-next-for-the-company/"}],"total":26,"per_page":50,"page":1,"last_page":1}'
     http_version: 
-  recorded_at: Sun, 26 Apr 2015 11:46:18 GMT
+  recorded_at: Sat, 09 May 2015 13:46:23 GMT
+- request:
+    method: get
+    uri: https://api.angel.co/1/press/125462
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - AngellistApi Ruby Gem 1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 09 May 2015 13:46:23 GMT
+      Etag:
+      - '"2f844b1564ae9a0e783770eaa0604001"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Ratelimit-Limit:
+      - '1000'
+      X-Ratelimit-Remaining:
+      - '992'
+      X-Request-Id:
+      - 9368449d1960844d349ec552c1a576d1
+      X-Runtime:
+      - '0.025574'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '396'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2014-06-19T21:00:36Z","id":125462,"owner_id":6702,"owner_type":"Startup","posted_at":"2014-02-13","snippet":"Since
+        being founded in 2010, 500 Startups has been pushing the limits of what you
+        might expect from a seed-stage investment fund. In just a few short years,
+        it has invested in more than 600 startups (!!!), launched its own accelerator
+        program,...","title":"500 Startups Launches Its First Two AngelList Syndicates,
+        Including One Just For Female Founders  |  TechCrunch","updated_at":"2014-06-19T21:00:36Z","url":"http://techcrunch.com/2014/02/13/500-startups-syndicates/"}'
+    http_version: 
+  recorded_at: Sat, 09 May 2015 13:46:23 GMT
 recorded_with: VCR 2.9.3
