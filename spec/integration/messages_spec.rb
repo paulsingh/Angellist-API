@@ -15,5 +15,10 @@ describe AngellistApi::Client::Messages, :authenticated,
       thread.should have_key field
     end
   end
+
+  it 'marks messages as read for a user' do
+    read_messages = client.post_mark_messages([1, 2, 3])
+    read_messages.should include(1, 2, 3)
+  end
 end
 

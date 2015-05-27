@@ -18,6 +18,14 @@ describe AngellistApi::Client::Messages do
       client.post_messages(options).should == "success"
     end
   end
-  
+
+  describe "#post_mark_messages" do
+    it "posts to 1/messages/mark" do
+      options = { :some => "options" }
+      client.should_receive(:post).with("1/messages/mark", options).and_return("success")
+      client.post_mark_messages(options).should == "success"
+    end
+  end
+
 end
 
